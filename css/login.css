@@ -1,0 +1,184 @@
+@charset "utf-8";body{background:rgba(70,90,240,.1);background-color:rgba(78,105,162,.1);font:12px/18px 'Open Sans',"Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif}input,textarea{outline:0}.big-header{background:#465a7c;height:250px;margin-left:-8px;margin-top:-8px;position:fixed;width:100%}.sign-in-form{background-color:#fff;border-radius:4px;box-shadow:0 0 1px #ccc;height:362px;left:0;margin:auto;position:fixed;right:0;top:160px;width:394px}#error-log,.come,.welc{position:absolute}#login,#pass{border:1px Solid;padding:10px 10px 10px 1px;width:246px;right:0}.come{font:600 17px Arial;margin-left:62px;margin-top:30px}.welc{color:#465a7c;font:400 13px Tahoma;left:0;right:0;text-align:center;top:366px}#error-log,#loading{font:700 13px sans-serif;margin-top:30px;top:0;left:0}#error-log{color:#d6929b;margin-left:200px}#loading{color:#000;margin-left:260px;position:absolute}.login-text,.pass-text{color:#666;position:absolute}#login{border-bottom:1px Solid #e3e8e6;font:400 14px Arial;left:0;margin:98px auto auto;position:absolute}#login:focus{border-bottom:1px Solid #444b7d;transition:border .1s}.login-text{font:400 13px/18px Tahoma,sans-serif,Arial,Helvetica;margin-left:64px;margin-top:70px}#pass{border-bottom:1px Solid #e3e8e6;font:400 14px Arial;left:0;margin:203px auto auto;position:absolute}#pass:focus{border-bottom:1px Solid #444b7d;transition:border .1s}.pass-text{font:400 13px/18px Tahoma,sans-serif,Arial,Helvetica;margin-left:64px;margin-top:175px}#come-button{background:#465a7c;border-radius:7px;border:transparent;color:#fff;cursor:pointer;font:700 13px/18px Tahoma,sans-serif,Arial,Helvetica;height:40px;left:0;right:0;margin:276px auto auto;position:absolute;width:266px;transition:background .2s}#come-button:hover{background:#283c64;transition:background .2s}.ball{border:4px solid #465a7c;opacity:.9;border-top:5px solid transparent;border-left:5px solid transparent;border-radius:50px;width:20px;height:20px;position:absolute;left:300px;top:30px;-moz-animation:spin .8s infinite linear;-webkit-animation:spin .8s infinite linear;visibility:hidden}@-moz-keyframes spin{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(360deg)}}@-moz-keyframes spinoff{0%{-moz-transform:rotate(0)}100%{-moz-transform:rotate(-360deg)}}
+
+
+@charset "utf-8";
+
+body {
+  background: rgba(70,90,240,.1);
+  //background-color: rgba(78,105,162,.1);
+  font: 12px/18px 'Open Sans',"Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif;
+}
+
+input, textarea {
+  outline:none;
+}
+
+/* Основные элементы */
+.big-header{
+  background:rgb(70,90,124);
+  height:250px;
+  margin-left: -8px;
+  margin-top: -8px;
+  position: fixed;
+  width:100%;
+}
+
+.sign-in-form {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px #ccc;
+  height:362px;
+  left:0;
+  margin: auto;
+  position: fixed;
+  right:0;
+  top:160px;
+  width:394px;
+}
+
+.come {
+  font:600 17px Arial;
+  margin-left: 62px;
+  margin-top: 30px; 
+  position: absolute;
+}
+
+.welc {
+  color:rgb(70,90,124);
+  font:normal 13px Tahoma;
+  left:0;
+  position: absolute;
+  right:0;
+  text-align: center;
+  top: 366px;
+}
+/* Конец основных элементов */
+
+/* Элементы загрузки */
+#error-log {
+  color: #d6929b;
+  font:bold 13px sans-serif;
+  left:0;
+  margin-left:200px;
+  margin-top: 30px;
+  position: absolute;
+  top:0;
+}
+
+#loading {
+  color: #000;
+  font:bold 13px sans-serif;
+  left:0;
+  margin-left:260px;
+  margin-top: 30px;
+  position: absolute;
+  top:0;
+}
+/* Конец эелементов загрузки */
+
+/* Элементы логина */
+#login {
+  border:1px Solid #fff;
+  border-bottom: 1px Solid #e3e8e6;
+  font:normal 14px Arial;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top:98px;
+  padding: 10px;
+  padding-left: 1px;
+  position: absolute;
+  width:246px;
+}
+
+#login:focus { 
+  border-bottom: 1px Solid rgb(68,75,125);
+  transition:border 0.1s;
+}   
+
+.login-text {
+  color:#666;
+  font:normal 13px/18px Tahoma,sans-serif,Arial,Helvetica;
+  margin-left: 64px;
+  margin-top: 70px;
+  position: absolute;
+}
+/* Конец элементов логина */
+
+/* Элементы пароля */
+#pass {
+  border:1px Solid #fff;
+  border-bottom: 1px Solid #e3e8e6;
+  font:normal 14px Arial;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top: 203px;
+  padding: 10px;
+  padding-left: 1px;
+  position: absolute;
+  width:246px;
+}
+
+#pass:focus { 
+  border-bottom: 1px Solid rgb(68,75,125);
+  transition:border 0.1s;
+}   
+
+.pass-text {
+  color:#666;
+  font:normal 13px/18px Tahoma,sans-serif,Arial,Helvetica;
+  margin-left: 64px;
+  margin-top: 175px;
+  position: absolute;
+}
+/* Конец элементов пароля */
+
+/* Элементы кнопки входа */
+#come-button {
+  background:rgb(70,90,124);
+  border-radius: 7px;
+  border:transparent;
+  color:#fff;
+  cursor: pointer;
+  font:bold 13px/18px Tahoma,sans-serif,Arial,Helvetica;
+  height:40px;
+  left:0;
+  right:0;
+  margin:auto;
+  margin-top: 276px;
+  position:absolute;
+  width:266px;
+  transition:background 0.2s;
+}
+
+#come-button:hover {
+  background:rgb(40,60,100);
+  transition:background 0.2s;
+}
+/* Конец элементов для кнопки входа */
+
+.ball {
+  border:4px solid rgb(70,90,124);
+  opacity:.9;
+  border-top:5px solid rgba(0,0,0,0);
+  border-left:5px solid rgba(0,0,0,0);
+  border-radius:50px;
+  width:20px;
+  height:20px;
+  position: absolute;
+  left:300px;
+  top:30px;
+  -moz-animation:spin .8s infinite linear;
+  -webkit-animation:spin .8s infinite linear;
+  visibility: hidden;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(360deg); }
+}
+@-moz-keyframes spinoff {
+  0% { -moz-transform:rotate(0deg); }
+  100% { -moz-transform:rotate(-360deg); }
+}

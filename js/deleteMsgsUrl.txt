@@ -1,0 +1,28 @@
+        case urls.deleteMsgsUrl + location.search: 
+            x.onreadystatechange = function() {
+
+                if(x.readyState != 4) return;
+
+                if(this.status == 200) {
+                    //alert(xhr.responseText);
+                    
+                    //*если использовать данную функцию здесь,то все будет происходить более синхронно, но визуально - медленнее
+                    //msgsActs.deleteMsgsFromHtml(params.location);
+
+                    //alert(mainArrayEachCycle(msgsArr[params.location]).length);
+
+                    var msg = msgsActs.getLastMsg(params.location);
+
+                    //if(msgsArr != "") (msg != false) ? graphics.sendMsgDialogChange(params.location,{text:msg.msgText,date:msg.msgDate}) : graphics.sendMsgDialogChange(params.location,{text:"The chat is empty.",date:this.dateDayForMsg()});
+                    (msg == false) ? graphics.sendMsgDialogChange(params.location,{text:"The chat is empty.",date:""}) : graphics.sendMsgDialogChange(params.location,{text:msg.msgText,date:msg.msgDate});
+
+                    //graphics.sendMsgDialogChange(params.location,{text:(params.msgInf).msgText,date:(params.msgInf).msgDate})
+
+                    getElems.getClassElem("msgs-send-form-wrap",0).removeChild(getElems.getClassElem("msgs-send-form-wrap",0).childNodes[3]);
+                } else {
+                    alert(x.status + ': ' + x.statusText);
+                }
+    
+                return;
+            }; 
+        break;
